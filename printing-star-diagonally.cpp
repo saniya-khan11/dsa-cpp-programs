@@ -7,13 +7,14 @@ int main(){
     int n=10;
     for(int i=1;i<=n;i++){
         //increasing triangle of space
-        for(int j=i;j<=n;j++){
+        for(int j=1;j<i;j++){
             cout<<" ";
         }
         //printing star diagonally
         for(int j=1;j<2;j++){
             cout<<"*";
         }
+        cout<<endl;
     }
     return 0;
 }

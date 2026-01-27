@@ -1,12 +1,11 @@
-bool armstrongNum(<int> n){
+bool isArmstrong(int n){
     int sum=0;
     int temp;//for storing number
     temp =n;
     while(temp!=0){
         int digit = temp%10;
-        sum+= digit*digit*digit;
+        sum+= (digit*digit*digit);
         temp=temp/10;
     }
-    if(sum== n) return true;
-    else    return false;
+    return sum==n;
 }

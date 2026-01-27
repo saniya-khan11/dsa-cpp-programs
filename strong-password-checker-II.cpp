@@ -9,10 +9,10 @@ public:
             if (specialChar.find(password[i]) != std::string::npos) countS =true;
             if(password[i]>=65 && password[i]<=90) countU = true;
             if(password[i]>=97 && password[i]<=122) countL = true ;
-            if(password[i]>=48 && password[i]<=57) countN =true;
+            if(password[i]>=48 && password[i]<=57) countN =    true;
            
         }
-         if (countS == 1 && countU ==1 && countL == 1 && countN == 1) return true;
+         if (countS && countU  && countL  && countN ) return true;
         return false;
     }
 };

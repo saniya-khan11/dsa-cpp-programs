@@ -1,4 +1,5 @@
 //  Write a program to reverse each word in line(sentence)
+//tc=O(n), SC= O(n)
 #include<iostream>
 #include<stack>
 using namespace std;
@@ -38,6 +39,20 @@ string reverseWord(string & str){
     
     return revString;
 }
+//optimized function to reverse word in place
+void inplaceWordReversal(string & str){
+    int start =0;//tracking the start of each word in sentence
+    int n= str.size();
+    for(int i=0;i<=n;i++){
+        if(i==n || str[i]==' '){
+            //marks the end of a word
+            reverse(str.begin()+start,str.begin()+i);
+            start = i+1;
+        }
+
+        }
+    }
+
 int main(){
     string s ="Hello this";
     cout << reverseWord(s);
